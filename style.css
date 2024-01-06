@@ -1,0 +1,94 @@
+body{
+    background-color: rgb(51, 51, 53);
+    color: azure;
+    position: relative;
+
+}
+.head{
+    width: 100vw;
+}
+.head h1{
+    text-align: center;
+}
+.container{
+    /* padding: 10rem; */
+    border-radius: 5px;
+}
+.covid-card{
+    display: flex;
+    border-radius: 5px;
+    background-color: rgba(97, 103, 103, 0.4);
+    box-shadow: 4px 4px 4px rgb(51, 51, 53);
+}
+.awarness{
+    width: 50%;
+    padding: 10px;
+    font-size: larger;
+    
+}
+.total-dtl{
+    width: 50%;
+    padding: 10px;
+}
+.ttl-info{
+   font-size: larger;
+}
+.confirmed,.recovered,.tested{
+    background-color: rgb(37, 38, 40);
+    border-radius: 5px;
+    text-align: center;
+}
+img{
+    width: 45vw;
+    position: absolute;
+    object-fit: fill;
+    top: 10rem;
+    left: 30rem;
+    z-index: -20;
+    border-radius: 50%;
+    animation-name: virus;
+    animation-duration: 80s;
+    animation-fill-mode: both;
+    animation-iteration-count: infinite;
+}
+.graph{
+    margin-top: 50px;
+    height: 400px;
+    z-index: 10;
+    box-shadow: 4px 4px 4px rgb(51, 51, 53);
+}
+.graph,canvas{
+    width: 100%;
+}
+@keyframes virus {
+    from{}
+    to{
+        transform: rotate(360deg);
+    }
+}
+@media screen and (max-width:768px) {
+    .covid-card{
+        flex-direction: column-reverse;
+    }
+    .awarness{
+        width: 100%;
+    }
+    .total-dtl{
+        width: 100%;
+    }
+    img{
+        width: 200px;
+        left: 60%;
+    }
+}
+@media screen and (min-width:992px){
+    body{
+        display: flex;
+        justify-content: center;
+        padding: 10rem;
+    }
+    img{
+        width: 750px;
+        left: 40rem;
+    }
+}
